@@ -180,7 +180,7 @@ G_MODULE_EXPORT void init_plugin(void)
     //init haskell 
     const char *name = "program";
     char **argv = g_malloc(sizeof(char*)*1);
-    *argv = g_malloc(sizeof(char)*strlen(name));
+    *argv = g_malloc(sizeof(char)*strlen(name) + 1);
     strcpy(*argv, name);
     int argc = 1;
     hs_init(&argc, &argv);
